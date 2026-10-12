@@ -665,7 +665,7 @@ async function verifyCode() {
   btn.textContent = '验 证 中...';
   err.textContent = '';
   try {
-    const res = await fetch('/.netlify/functions/verify', {
+    const res = await fetch('/api/verify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ code })
